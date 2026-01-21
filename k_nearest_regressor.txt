@@ -1,0 +1,88 @@
+K-NEAREST NEIGHBORS REGRESSOR (KNN REGRESSOR)
+
+K-Nearest Neighbors Regressor is a non-parametric, instance-based learning algorithm used for regression.
+It makes predictions based on the target values of the closest data points in the feature space.
+
+WHAT IS KNN REGRESSOR
+
+KNN Regressor does not learn an explicit model during training.
+Instead, it stores the entire training dataset and performs computation only at prediction time.
+
+Prediction rule:
+
+Given a new input 
+𝑥
+x:
+
+Find the K closest points in the training data
+
+Aggregate their target values (usually mean)
+
+Return the aggregated value as the prediction
+y^​(x)=K1​i∈KNN(x)∑​yi​
+	​
+
+WHY USE KNN REGRESSOR
+
+Simple and intuitive
+
+Captures non-linear patterns
+
+No training phase
+
+No assumptions about data distribution
+
+WHEN TO USE KNN REGRESSOR
+
+Use KNN Regressor when:
+
+Dataset is small to medium
+
+Relationships are non-linear
+
+Local patterns matter
+
+You want a baseline model
+
+Avoid KNN Regressor when:
+
+Dataset is very large
+
+Dimensionality is high
+
+Real-time prediction is required
+
+Data is noisy
+
+KEY HYPERPARAMETERS
+
+n_neighbors (K):
+
+Number of nearest neighbors
+
+Small K → overfitting
+
+Large K → underfitting
+
+weights:
+
+uniform → equal weight
+
+distance → closer points matter more
+
+metric:
+
+euclidean (default)
+
+manhattan
+
+minkowski
+
+IMPORTANT REQUIREMENT
+
+Feature scaling is mandatory.
+
+Distance-based models are sensitive to feature magnitude.
+Always apply:
+
+StandardScaler or MinMaxScaler
