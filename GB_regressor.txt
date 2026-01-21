@@ -1,0 +1,91 @@
+GRADIENT BOOSTING REGRESSOR (GBR)
+
+Gradient Boosting Regressor is an ensemble learning method that builds a strong regression model by combining multiple weak learners (decision trees) trained sequentially. Each new tree corrects the errors made by the previous trees.
+
+WHAT IS GRADIENT BOOSTING REGRESSOR
+
+Gradient Boosting Regressor minimizes a loss function by adding trees in a stage-wise manner. At each stage, a new tree is trained on the residuals (negative gradients) of the loss function.
+
+Core idea:
+
+Start with a simple model
+
+Iteratively add trees to reduce prediction error
+
+Optimize using gradient descent in function space
+
+WHY USE GRADIENT BOOSTING REGRESSOR
+
+Handles complex non-linear relationships
+
+Captures feature interactions automatically
+
+High predictive accuracy on tabular data
+
+Robust to outliers (with appropriate loss)
+
+Does not require feature scaling
+
+WHEN TO USE GRADIENT BOOSTING REGRESSOR
+
+Use GBR when:
+
+Data has non-linear patterns
+
+High accuracy is required
+
+Dataset fits into memory
+
+Feature interactions are important
+
+Prediction uncertainty is needed
+
+Avoid GBR when:
+
+Dataset is extremely large
+
+Online or incremental learning is required
+
+Training time must be minimal
+
+MODEL OBJECTIVE
+
+General objective:
+
+min_f Σ L(y, f(x))
+
+Where:
+
+L is the loss function
+
+f(x) is an additive model of decision trees
+
+IMPORTANT HYPERPARAMETERS
+
+n_estimators:
+
+Number of boosting stages (trees)
+
+learning_rate:
+
+Shrinks contribution of each tree
+
+Smaller values improve generalization
+
+max_depth:
+
+Depth of individual trees
+
+Controls model complexity
+
+min_samples_leaf:
+
+Minimum samples per leaf
+
+Reduces overfitting
+
+subsample:
+
+Fraction of samples used per tree
+
+Introduces randomness (stochastic boosting)
