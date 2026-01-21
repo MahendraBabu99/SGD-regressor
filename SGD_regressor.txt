@@ -1,0 +1,88 @@
+SGD REGRESSOR – OVERVIEW AND USAGE
+
+SGD Regressor (Stochastic Gradient Descent Regressor) is a linear regression model optimized using stochastic gradient descent. It is designed for efficiency, scalability, and incremental learning, especially when working with very large datasets.
+
+WHAT IS SGD REGRESSOR
+
+SGD Regressor minimizes a loss function by updating model weights using one sample or a small batch at a time instead of the entire dataset.
+
+Objective (Squared Error):
+
+min_w (1/n) Σ (y - Xw)² + regularization
+
+WHY USE SGD REGRESSOR
+
+Handles very large datasets efficiently
+
+Works when data does not fit into memory
+
+Supports online / incremental learning
+
+Faster training compared to batch methods
+
+Suitable for streaming data
+
+WHEN TO USE SGD REGRESSOR
+
+Use SGD Regressor when:
+
+Dataset is very large (millions of samples)
+
+Data arrives continuously (online learning)
+
+Approximate solutions are acceptable
+
+Memory resources are limited
+
+Avoid SGD Regressor when:
+
+Dataset is small
+
+Exact solutions are preferred
+
+Data is highly non-linear
+
+Feature scaling is not possible
+
+KEY REQUIREMENT
+
+Feature scaling is mandatory.
+
+SGD is highly sensitive to feature magnitude. Always apply:
+
+StandardScaler
+
+MinMaxScaler
+IMPORTANT HYPERPARAMETERS
+
+loss:
+
+squared_error (default)
+
+huber
+
+epsilon_insensitive
+
+penalty:
+
+l2 (ridge)
+
+l1 (lasso)
+
+elasticnet
+
+alpha:
+
+Regularization strength
+
+learning_rate:
+
+constant
+
+optimal
+
+adaptive
+
+max_iter:
+
+Number of training epochs
